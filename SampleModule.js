@@ -71,7 +71,7 @@ Module.register("SampleModule", {
 	},
 
 	// this is the major worker of the module, it provides the displayable content for this module
-	getDom1: function() {
+	getDom: function() {
 		var wrapper = document.createElement("div");
 
 		// if user supplied message text in its module config, use it
@@ -155,7 +155,7 @@ Module.register("SampleModule", {
   return e;
 },
 
-getDom: function(){
+getDom_Special: function(){
   var wrapper = document.createElement("div");
   var table = this.newElement({type:'table'}) // note here, just type specified, to test code above
   
