@@ -8,7 +8,7 @@ sample module structure
 
 Module.register("SampleModule", {
 	some_variable:  true,
-	some_other_valriable: "a string",
+	some_other_variable: "a string",
   MBW: {
     "testing": 1234,
     "testing 2": "12345678",
