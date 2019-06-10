@@ -10,10 +10,13 @@ Module.register("SampleModule", {
   // define variables used by module, but not in config data
 	some_variable:  true,
 	some_other_variable: "a string",
-
+  
+	// holder for config info from module_name.js
+	config:null,
+  
+  // anything here in defaults will be added to the config data
+  // and replaced if the same thing is provided in config
 	defaults: {
-		// holder for config info from module_name.js
-		config:null,
     message: "default message if none supplied in config.js"
 	},
 
