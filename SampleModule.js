@@ -7,17 +7,17 @@ sample module structure
 
 
 Module.register("SampleModule", {
-  // define variables used by module, but not in config data
+	// define variables used by module, but not in config data
 	some_variable:  true,
 	some_other_variable: "a string",
-  
+
 	// holder for config info from module_name.js
 	config:null,
-  
-  // anything here in defaults will be added to the config data
-  // and replaced if the same thing is provided in config
+
+	// anything here in defaults will be added to the config data
+	// and replaced if the same thing is provided in config
 	defaults: {
-    message: "default message if none supplied in config.js"
+		message: "default message if none supplied in config.js"
 	},
 
 	init: function(){
@@ -91,18 +91,18 @@ Module.register("SampleModule", {
 			Log.log(this.name + " received a system notification: " + notification);
 		}
 	},
-  
+
 	// messages received from from your node helper (NOT other modules or the system)
 	// payload is a notification dependent data structure, up to you to design between module and node_helper
 	socketNotificationReceived: function(notification, payload) {
 		Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
-    if(notification === "message_from_helper"){
-      this.config.message = payload;
-      // tell mirror runtime that our data has changed, 
-      // we will be called back at GetDom() to provide the updated content
-      this.updateDom(1000)
-    }
-      
+		if(notification === "message_from_helper"){
+			this.config.message = payload;
+			// tell mirror runtime that our data has changed,
+			// we will be called back at GetDom() to provide the updated content
+			this.updateDom(1000)
+		}
+
 	},
 
 	// system notification your module is being hidden
@@ -116,20 +116,20 @@ Module.register("SampleModule", {
 	resume: function(){
 
 	},
-  
+
 	// this is the major worker of the module, it provides the displayable content for this module
 	getDom: function() {
 		var wrapper = document.createElement("div");
 
 		// if user supplied message text in its module config, use it
-  if(this.config.hasOwnProperty("message")){
-      // using text from module config block in config.js
-      wrapper.innerHTML = this.config.message;
-    }
+		if(this.config.hasOwnProperty("message")){
+			// using text from module config block in config.js
+			wrapper.innerHTML = this.config.message;
+		}
 		else{
 		// use hard coded text
-      wrapper.innerHTML = "Hello world!";
-    }
+			wrapper.innerHTML = "Hello world!";
+		}
 
 		// pass the created content back to MM to add to DOM.
 		return wrapper;
