@@ -25,6 +25,8 @@ module.exports = NodeHelper.create({
 		if (notification === "CONFIG") {
 			// save payload config info
 			this.config=payload
+      // wait 15 seconds, send a message back to module
+      setTimeout(()=> { this.sendSocketNotification("message_from_helper"," this is a test_message")}, 15000)     
 		}
 		else if(notification === "????2") {
 		}
