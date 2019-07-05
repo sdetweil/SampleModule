@@ -62,12 +62,12 @@ Module.register("SampleModule", {
 	// return list of translation files to use, if any
 	getTranslations: function() {
 		return
-		[
+		{
 			// sample of list of files to specify here, if no files, do not use this routine, , or return empty list
 
 			// en: "translations/en.json",  (folders and filenames in your module folder)
 			// de: "translations/de.json"
-		]
+		}
 	},
 
 
