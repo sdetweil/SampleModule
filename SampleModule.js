@@ -35,8 +35,7 @@ Module.register("SampleModule", {
 
 	// return list of other functional scripts to use, if any (like require in node_helper)
 	getScripts: function() {
-		return
-		[
+	return	[
 			// sample of list of files to specify here, if no files,do not use this routine, or return empty list
 
 			//'script.js', // will try to load it from the vendor folder, otherwise it will load is from the module folder.
@@ -44,12 +43,11 @@ Module.register("SampleModule", {
 			//this.file('anotherfile.js'), // this file will be loaded straight from the module folder.
 			//'https://code.jquery.com/jquery-2.2.3.min.js',  // this file will be loaded from the jquery servers.
 		]
-	},
+	}, 
 
 	// return list of stylesheet files to use if any
 	getStyles: function() {
-		return
-		[
+		return 	[
 			// sample of list of files to specify here, if no files, do not use this routine, , or return empty list
 
 			//'script.css', // will try to load it from the vendor folder, otherwise it will load is from the module folder.
@@ -60,15 +58,14 @@ Module.register("SampleModule", {
 	},
 
 	// return list of translation files to use, if any
-	getTranslations: function() {
-		return
-		{
+	/*getTranslations: function() {
+		return {
 			// sample of list of files to specify here, if no files, do not use this routine, , or return empty list
 
 			// en: "translations/en.json",  (folders and filenames in your module folder)
 			// de: "translations/de.json"
 		}
-	},
+	}, */ 
 
 
 
