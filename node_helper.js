@@ -10,11 +10,11 @@ module.exports = NodeHelper.create({
 	},
 
 	start() {
-		console.log(`Starting module helper: ${this.name}`);
+		console.log('Starting module helper:' +this.name);
 	},
 
 	stop(){
-		console.log(`Stopping module helper: ${this.name}`);
+		console.log('Stopping module helper: ' +this.name);
 	},
 
 	// handle messages from our module// each notification indicates a different messages
