@@ -16,8 +16,9 @@ add this to the modules list in config/config.js
 ```
 the module naming rules are 
 
- everything in MM is case sensitive  Test is not the same as test
- module name = folder name in MagicMirror/modules = filename of the main js (modulename.js, here SampleModulejs) = the name used in the register statement
+ everything in MM is case sensitive  <br>
+ Test is not the same as test<br>
+ module name = folder name in MagicMirror/modules = filename of the main js (modulename.js, here SampleModule.js) = the name used in the register statement
 ```
     Module.register("SampleModule", {
 ```
