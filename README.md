@@ -10,7 +10,7 @@ add this to the modules list in config/config.js
    module:"SampleModule",
    position:"middle_center",
    config:{
-      message:"some message to be displayed by this module, this is optional as the module provides a default"
+      message:"some message to be displayed by this module, this is optional as the module provides a default message"
    }
 }
 ```
