@@ -1,7 +1,7 @@
 # SampleModule
 sample MM module:
 
-this module shows the basics as documented in the MM development spec
+this module shows the basics as documented in the MM development spec.
 
 add this to the modules list in config/config.js
 
